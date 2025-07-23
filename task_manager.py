@@ -14,3 +14,10 @@ def complete_task(task_id):
     with get_connection() as conn:
         conn.execute("UPDATE tasks SET is_done = 1 WHERE id = ?", (task_id,))
         conn.commit()
+
+def delete_task(task_id):
+    with get_connection() as conn:
+        conn.execute("DELETE FROM tasks WHERE id = ?", (task_id,))
+        conn.commit()
+
+        

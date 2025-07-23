@@ -19,7 +19,6 @@ def daily_checkin():
     )
     print("\n[bold green]Daily Check-in sent![/bold green]")
 
-# Schedule to run every 30 seconds (for testing)
 schedule.every().day.at("21:00").do(daily_checkin)
 
 print("Scheduler started. Press Ctrl+C to stop.")
